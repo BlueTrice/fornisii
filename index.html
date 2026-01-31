@@ -64,33 +64,35 @@ p {
 
 /* BUTTON GENERAL */
 button {
-  padding: 14px 32px;
-  font-size: 1.1rem;
+  padding: 18px 42px;          /* ⬅️ lebih besar */
+  font-size: 1.25rem;          /* ⬅️ teks lebih gede */
   border-radius: 999px;
   border: none;
   cursor: pointer;
   background: linear-gradient(45deg, #ff69b4, #ff1493);
   color: white;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px rgba(255, 20, 147, 0.35);
 }
 
 /* BUTTON GROUP */
 .choice {
   display: flex;
-  gap: 16px;
-  margin-top: 24px;
+  gap: 18px;
+  margin-top: 28px;
 }
 
-/* YES BUTTON */
+/* YES BUTTON (lebih menonjol) */
 #yesBtn {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
+  padding: 20px 50px;
 }
 
 /* NO BUTTON */
 #noBtn {
   background: white;
   color: #ff1493;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* MOBILE OPTIMIZATION */
@@ -147,7 +149,7 @@ button {
   <div class="gif">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2lnbzR2Y3l1aXZ3dXBibDRraXpvd3RjMDJycHNnb3E1MHl0cDc2MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/TjSPQgowhhJdHgvnwA/giphy.gif">
   </div>
-  <p>Thankyou so muchh.</p>
+  <h1>Thankyou so muchh.</h1>
   <button onclick="nextPage(3)">Next</button>
 </div>
 
@@ -157,7 +159,7 @@ button {
   <div class="gif">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDYycWdibnJ1MWt0c2ZhNGxqcWlpNGkyem1oeHhob3M0azZmNzQ1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/6AHqMMW36CSngRQnmv/giphy.gif">
   </div>
-  <h1>Sebagai gantinya i have something for u sabtu nantii :p</h1>
+  <h1>But don't worry, sebagai gantinya i have something for u sabtu nantii :p</h1>
   <button onclick="nextPage(4)">Next</button>
 </div>
 
@@ -173,7 +175,7 @@ button {
 
 <!-- PAGE 5 -->
 <div id="page5" class="page">
-  <h1>HAPPY VALENTINE!! <br> Di tunggu yaa, Byee! 💕</h1>
+  <h1>HAPPY VALENTINE !! <br> Di tunggu yaa <br> Byee! 💕</h1>
   <div class="gif">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDYycWdibnJ1MWt0c2ZhNGxqcWlpNGkyem1oeHhob3M0azZmNzQ1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iLsXmu9W27zFdE7CZa/giphy.gif">
   </div>
@@ -183,7 +185,7 @@ button {
 const music = document.getElementById("music");
 
 function start() {
-  music.volume = 0.3;
+  music.volume = 0.6;
   music.play();
   nextPage(1);
 }
@@ -223,3 +225,4 @@ function noClick() {
 
 </body>
 </html>
+
