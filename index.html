@@ -6,24 +6,27 @@
 <title>from foxy to you</title>
 
 <style>
+/* RESET */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
-  margin: 0;
-  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
   min-height: 100vh;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
 }
 
 /* PAGE */
 .page {
   display: none;
   min-height: 100vh;
-  padding: 24px 16px;
+  padding: 48px 20px 32px;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
@@ -32,53 +35,79 @@ body {
   display: flex;
 }
 
-/* TEXT */
+/* TITLE */
 h1 {
   color: #ff2f92;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
   margin-bottom: 16px;
 }
 
+/* PARAGRAPH */
 p {
   color: #ff2f92;
-  font-size: 0.95rem;
-  max-width: 320px;
-}
-
-/* GIF */
-.gif img {
-  width: 180px;
-  max-width: 80%;
-  margin: 18px 0;
-}
-
-/* BUTTON */
-button {
-  padding: 12px 26px;
   font-size: 1rem;
-  border-radius: 30px;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-bottom: 12px;
+}
+
+/* GIF / IMAGE */
+.gif {
+  margin: 24px 0;
+}
+
+.gif img {
+  width: 220px;
+  max-width: 90%;
+}
+
+/* BUTTON GENERAL */
+button {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 999px;
   border: none;
   cursor: pointer;
   background: linear-gradient(45deg, #ff69b4, #ff1493);
   color: white;
+  transition: transform 0.25s ease;
 }
 
-/* YES NO */
+/* BUTTON GROUP */
 .choice {
   display: flex;
-  gap: 14px;
-  margin-top: 20px;
+  gap: 16px;
+  margin-top: 24px;
 }
 
+/* YES BUTTON */
 #yesBtn {
-  transition: transform 0.3s ease;
+  font-size: 1.25rem;
 }
 
+/* NO BUTTON */
 #noBtn {
   background: white;
   color: #ff1493;
   font-size: 0.95rem;
 }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .gif img {
+    width: 240px;
+  }
+
+  button {
+    font-size: 1.15rem;
+  }
+}
+
 </style>
 </head>
 
