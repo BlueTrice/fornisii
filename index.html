@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>from foxy to you</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+  min-height: 100vh;
+}
+
+/* PAGE */
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 24px 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page.active {
+  display: flex;
+}
+
+/* TEXT */
+h1 {
+  color: #ff2f92;
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+}
+
+p {
+  color: #ff2f92;
+  font-size: 0.95rem;
+  max-width: 320px;
+}
+
+/* GIF */
+.gif img {
+  width: 180px;
+  max-width: 80%;
+  margin: 18px 0;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 26px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  color: white;
+}
+
+/* YES NO */
+.choice {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+#yesBtn {
+  transition: transform 0.3s ease;
+}
+
+#noBtn {
+  background: white;
+  color: #ff1493;
+  font-size: 0.95rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="dc.mp3" type="audio/mpeg">
+</audio>
+
+<!-- INDEX -->
+<div id="page0" class="page active">
+  <h1>Hi Nisiii !!!</h1>
+  <div class="gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXAwbms1NmdpaTl6dXo0MWVmM2R5MG5paHF5bG9jdDVzb3V1eWR1dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5q5IgZu99E0KPQ1de5/giphy.gif">
+  </div>
+  <button onclick="start()">Halo0</button>
+</div>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page">
+  <h1>Will you be my Valentine this year? 💌</h1>
+
+  <div class="gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDYycWdibnJ1MWt0c2ZhNGxqcWlpNGkyem1oeHhob3M0azZmNzQ1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YPN056pFuQQvyDuD65/giphy.gif">
+  </div>
+
+  <div class="choice">
+    <button id="yesBtn" onclick="nextPage(2)">YES 💖</button>
+    <button id="noBtn" onclick="noClick()">NO 😤</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <h1>Yayyy!! 😆</h1>
+  <div class="gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2lnbzR2Y3l1aXZ3dXBibDRraXpvd3RjMDJycHNnb3E1MHl0cDc2MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/TjSPQgowhhJdHgvnwA/giphy.gif">
+  </div>
+  <p>Thankyou so muchh.</p>
+  <button onclick="nextPage(3)">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <h1>Unfortunately im too far... 😢</h1>
+  <div class="gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDYycWdibnJ1MWt0c2ZhNGxqcWlpNGkyem1oeHhob3M0azZmNzQ1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/6AHqMMW36CSngRQnmv/giphy.gif">
+  </div>
+  <h1>Sebagai gantinya i have something for u sabtu nantii :p</h1>
+  <button onclick="nextPage(4)">Next</button>
+</div>
+
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+  <h1>It’s not expensive but hopefully it can make you smile & make your day a little bit better 🤍🙂</h1>
+  <div class="gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aTRpcDV6MjY5M3J5ejBqdXpnOGYwZmliN3R0OTBtODFvMXgweDdwayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/14d8Aj81ffgnQY/giphy.gif">
+  </div>
+  <button onclick="nextPage(5)">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page">
+  <h1>HAPPY VALENTINE!! <br> Di tunggu yaa, Byee! 💕</h1>
+  <div class="gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDYycWdibnJ1MWt0c2ZhNGxqcWlpNGkyem1oeHhob3M0azZmNzQ1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iLsXmu9W27zFdE7CZa/giphy.gif">
+  </div>
+</div>
+
+<script>
+const music = document.getElementById("music");
+
+function start() {
+  music.volume = 0.3;
+  music.play();
+  nextPage(1);
+}
+
+function nextPage(n) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page" + n).classList.add("active");
+}
+
+/* NO BUTTON LOGIC */
+let noTexts = [
+  "Are you sure? 😢",
+  "Pleaseee 🥺",
+  "Think again 💔",
+  "Don't do this 😭",
+  "Okay last try 😞",
+  "PLSPLSPLS 🥺",
+  "KALIINI DOANGG 😭",
+  "Are you sure? 😢",
+  "ASKAMKJAFS 😭",
+];
+
+let noIndex = 0;
+let scale = 1;
+
+function noClick() {
+  const yes = document.getElementById("yesBtn");
+  const no = document.getElementById("noBtn");
+
+  scale += 0.18;                // YES makin besar
+  yes.style.transform = `scale(${scale})`;
+
+  no.textContent = noTexts[noIndex % noTexts.length];
+  noIndex++;
+}
+</script>
+
+</body>
+</html>
